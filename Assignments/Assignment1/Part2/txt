@@ -1,0 +1,87 @@
+Reading training data from file hepatitis-training.data
+2 categories
+16 attributesReading test data from file hepatitis-test.data
+Read 27 instances
+Read 16 attributes
+[AGE, FEMALE, STEROID, ANTIVIRALS, FATIGUE, MALAISE, ANOREXIA, BIGLIVER, FIRMLIVER, SPLEENPALPABLE, SPIDERS, ASCITES, VARICES, BILIRUBIN, SGOT, HISTOLOGY]
+
+Desction tree: 
+	ASCITES = True:
+	 SPIDERS = True:
+	  VARICES = True:
+	   FIRMLIVER = True:
+	    Class live, prob=100.00 count: 49
+	   FIRMLIVER = False:
+	    BIGLIVER = True:
+	     STEROID = True:
+	      Class live, prob=100.00 count: 5
+	     STEROID = False:
+	      FEMALE = True:
+	       Class live, prob=100.00 count: 2
+	      FEMALE = False:
+	       ANTIVIRALS = True:
+	        FATIGUE = True:
+	         Class die, prob=100.00 count: 1
+	        FATIGUE = False:
+	         Class live, prob=100.00 count: 4
+	       ANTIVIRALS = False:
+	        Class die, prob=100.00 count: 1
+	    BIGLIVER = False:
+	     Class live, prob=100.00 count: 7
+	  VARICES = False:
+	   Class die, prob=100.00 count: 1
+	 SPIDERS = False:
+	  MALAISE = True:
+	   Class live, prob=100.00 count: 4
+	  MALAISE = False:
+	   BILIRUBIN = True:
+	    AGE = True:
+	     Class live, prob=100.00 count: 2
+	    AGE = False:
+	     ANOREXIA = True:
+	      SPLEENPALPABLE = True:
+	       SGOT = True:
+	        HISTOLOGY = True:
+	         Class die, prob=50.00 count: 2
+	        HISTOLOGY = False:
+	         Class live
+	       SGOT = False:
+	        Class live
+	      SPLEENPALPABLE = False:
+	       Class live
+	     ANOREXIA = False:
+	      Class live, prob=100.00 count: 1
+	   BILIRUBIN = False:
+	    Class live, prob=52.63 count: 19
+	ASCITES = False:
+	 Class die, prob=75.00 count: 12
+
+Test VS Algorithm output : 
+live live
+live live
+live live
+live live
+live live
+die live
+live live
+live live
+live live
+live live
+die die
+live live
+die die
+live live
+die die
+live live
+live live
+live live
+live live
+live live
+live live
+live live
+live live
+live die
+live live
+live live
+live die
+Accurate rate: 88.88888888888889%

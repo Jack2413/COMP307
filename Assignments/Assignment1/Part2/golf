@@ -1,0 +1,48 @@
+Reading training data from file hepatitis-training.data
+2 categories
+16 attributesReading test data from file hepatitis-test.data
+Read 6 instances
+Read 6 attributes
+[CLOUDY, RAINING, HOT, COLD, HUMID, WINDY]
+
+Desction tree: 
+	WINDY = True:
+	 CLOUDY = True:
+	  RAINING = True:
+	   Class StayHome, prob=100.00 count: 1
+	  RAINING = False:
+	   Class PlayGolf, prob=100.00 count: 1
+	 CLOUDY = False:
+	  Class StayHome, prob=100.00 count: 1
+	WINDY = False:
+	 Class PlayGolf, prob=100.00 count: 5
+
+CLOUDY 0.633333
+RAINING 0.633333
+HOT 0.666667
+COLD 0.700000
+HUMID 0.666667
+WINDY 0.833333
+WINDY
+
+CLOUDY 0.666667
+RAINING 0.666667
+HOT 0.666667
+COLD 0.555556
+HUMID 0.666667
+CLOUDY
+
+RAINING 1.000000
+HOT 0.500000
+COLD 0.500000
+HUMID 1.000000
+RAINING
+
+Test VS Algorithm output : 
+StayHome StayHome
+StayHome PlayGolf
+PlayGolf StayHome
+PlayGolf PlayGolf
+PlayGolf PlayGolf
+PlayGolf PlayGolf
+Accurate rate: 66.66666666666666%

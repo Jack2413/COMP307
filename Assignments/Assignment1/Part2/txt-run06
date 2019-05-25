@@ -1,0 +1,97 @@
+Reading training data from file hepatitis-training-run06.data
+2 categories
+16 attributesReading test data from file hepatitis-test-run06.data
+Read 37 instances
+Read 16 attributes
+[AGE, FEMALE, STEROID, ANTIVIRALS, FATIGUE, MALAISE, ANOREXIA, BIGLIVER, FIRMLIVER, SPLEENPALPABLE, SPIDERS, ASCITES, VARICES, BILIRUBIN, SGOT, HISTOLOGY]
+
+Desction tree: 
+	SPIDERS = True:
+	 VARICES = True:
+	  STEROID = True:
+	   Class live, prob=100.00 count: 36
+	  STEROID = False:
+	   HISTOLOGY = True:
+	    FATIGUE = True:
+	     Class die, prob=100.00 count: 1
+	    FATIGUE = False:
+	     SPLEENPALPABLE = True:
+	      ASCITES = True:
+	       Class live, prob=100.00 count: 7
+	      ASCITES = False:
+	       AGE = True:
+	        Class live, prob=100.00 count: 1
+	       AGE = False:
+	        Class die, prob=100.00 count: 1
+	     SPLEENPALPABLE = False:
+	      Class die, prob=100.00 count: 1
+	   HISTOLOGY = False:
+	    MALAISE = True:
+	     Class live, prob=100.00 count: 15
+	    MALAISE = False:
+	     ANOREXIA = True:
+	      Class live, prob=100.00 count: 4
+	     ANOREXIA = False:
+	      Class die, prob=100.00 count: 1
+	 VARICES = False:
+	  Class die, prob=100.00 count: 1
+	SPIDERS = False:
+	 ANTIVIRALS = True:
+	  Class live, prob=100.00 count: 3
+	 ANTIVIRALS = False:
+	  FIRMLIVER = True:
+	   BILIRUBIN = True:
+	    FEMALE = True:
+	     Class live, prob=100.00 count: 2
+	    FEMALE = False:
+	     BIGLIVER = True:
+	      SGOT = True:
+	       Class die, prob=50.00 count: 2
+	      SGOT = False:
+	       Class live
+	     BIGLIVER = False:
+	      Class live
+	   BILIRUBIN = False:
+	    Class die, prob=52.38 count: 21
+	  FIRMLIVER = False:
+	   Class live, prob=75.00 count: 4
+
+Test VS Algorithm output : 
+live live
+die live
+live live
+live live
+live live
+live live
+live live
+live die
+die die
+die live
+live live
+live live
+live live
+live live
+die live
+live die
+die live
+live live
+die live
+live live
+live live
+live live
+live live
+live live
+die live
+live live
+live live
+die die
+live live
+live live
+live die
+live live
+live live
+live live
+live live
+live die
+live live
+Accurate rate: 72.97297297297297%
